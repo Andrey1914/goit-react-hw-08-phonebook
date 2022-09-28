@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { IconButton } from '@mui/material';
-import { DeleteIcon } from '@mui/icons-material/Delete';
+import DeleteIcon from '@mui/icons-material/Delete';
 import { useSelector } from 'react-redux';
 import { filterContacts } from 'redux/selectors';
 import { useDeleteContactMutation, useGetContactsQuery } from 'redux/API';

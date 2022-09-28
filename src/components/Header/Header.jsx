@@ -5,7 +5,7 @@ import { useGetUserQuery } from 'redux/API';
 const activeLink = ({ isActive }) =>
   isActive ? 'nav-link active' : 'nav-link';
 
-const Header = () => {
+export default function Header() {
   const { data } = useGetUserQuery();
 
   return (
@@ -26,6 +26,4 @@ const Header = () => {
       )}
     </header>
   );
-};
-
-export default Header;
+}
