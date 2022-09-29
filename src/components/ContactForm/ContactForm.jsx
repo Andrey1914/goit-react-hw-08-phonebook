@@ -1,3 +1,7 @@
+import Box from '@mui/material/Box';
+import TextField from '@mui/material/TextField';
+import Button from '@mui/material/Button';
+import { IoMdPersonAdd } from 'react-icons/io';
 import { useState } from 'react';
 
 const ContactForm = ({ onSubmit }) => {
@@ -35,33 +39,46 @@ const ContactForm = ({ onSubmit }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
       <label>
-        Name
-        <input
+        {/* Name */}
+        <TextField
           type="text"
           name="name"
+          label="Name"
           value={name}
           pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
           title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
           required
           onChange={handleInputChange}
+          margin="normal"
+          fullWidth
         />
       </label>
       <label>
-        Number
-        <input
+        {/* Number */}
+        <TextField
           type="tel"
           name="number"
+          label="Number"
           value={number}
           pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
           title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
           required
           onChange={handleInputChange}
+          margin="normal"
+          fullWidth
         />
       </label>
-      <button type="submit">Add contact</button>
-    </form>
+      <Button
+        type="submit"
+        fullWidth
+        variant="contained"
+        sx={{ mt: 3, mb: 2, gap: 2 }}
+      >
+        Add contact <IoMdPersonAdd size={20} />
+      </Button>
+    </Box>
   );
 };
 

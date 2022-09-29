@@ -2,6 +2,8 @@ import ContactForm from 'components/ContactForm/ContactForm';
 import ContactList from 'components/ContactList/ContactList';
 import Filter from 'components/Filter/Filter';
 import { useGetContactsQuery, useAddContactsMutation } from 'redux/API';
+import Box from '@mui/material/Box';
+import Container from '@mui/material/Container';
 
 export default function PhonebookPage() {
   const { data } = useGetContactsQuery();
@@ -15,12 +17,20 @@ export default function PhonebookPage() {
   };
 
   return (
-    <div>
-      <h1>Phonebook</h1>
-      <ContactForm onSubmit={formSubmit} />
-      <h2>Contact</h2>
-      <Filter />
-      {data && <ContactList />}
-    </div>
+    <Container maxWidth="xs">
+      <Box
+        sx={{
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+        }}
+      >
+        <h1>Phonebook</h1>
+        <ContactForm onSubmit={formSubmit} />
+        <h2>Contact</h2>
+        <Filter />
+        {data && <ContactList />}
+      </Box>
+    </Container>
   );
 }
