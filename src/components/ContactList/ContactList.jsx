@@ -1,5 +1,6 @@
 import * as React from 'react';
-import { Box, IconButton } from '@mui/material';
+import Box from '@mui/material/Box';
+import Button from '@mui/material/Button';
 import DeleteIcon from '@mui/icons-material/Delete';
 import { useSelector } from 'react-redux';
 import { filterContacts } from 'redux/selectors';
@@ -40,17 +41,21 @@ const ContactList = () => {
                   alignItems="center"
                   borderRadius="4px"
                   width="100%"
-                  sx={{ m: 0, pl: 3, gap: 2 }}
+                  sx={{ m: 0, pl: 1, gap: 2 }}
                 >
                   {name}: <span>{number}</span>
-                  <IconButton
-                    aria-label="delete"
-                    id={id}
-                    onClick={() => deleteContact(id)}
-                  >
-                    <DeleteIcon />
-                  </IconButton>
                 </Box>
+                <Button
+                  aria-label="delete"
+                  id={id}
+                  onClick={() => deleteContact(id)}
+                  // fullWidth
+                  variant="outlined"
+                  width="32px"
+                  sx={{ ml: 3 }}
+                >
+                  <DeleteIcon />
+                </Button>
               </Box>
             ))}
           </Box>
