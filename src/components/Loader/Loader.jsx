@@ -3,7 +3,7 @@ import Box from '@mui/material/Box';
 
 export default function Loader() {
   return (
-    <Box display="flex" justifyContent="center">
+    <Box display="flex" justifyContent="center" alignItems="center">
       <Oval
         height={80}
         width={80}
