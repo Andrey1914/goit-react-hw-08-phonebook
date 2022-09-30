@@ -32,7 +32,7 @@ const UserMenu = ({ data }) => {
       justifyContent="flex-end"
       alignItems="center"
     >
-      <Greeting>{`Привіт, ${data?.name}!`}</Greeting>
+      <Greeting>{`Привіт, ${data?.email}!`}</Greeting>
       <Button type="button" onClick={logOutUser} variant="contained">
         <IoIosLogOut size={24} />
       </Button>
