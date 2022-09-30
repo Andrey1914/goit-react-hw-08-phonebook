@@ -16,7 +16,6 @@ const Filter = () => {
   return (
     <Box component="form" noValidate width="100%" sx={{ mb: 1 }}>
       <label>
-        {/* Find contacts by name */}
         <TextField
           type="text"
           label="Find contacts by name"

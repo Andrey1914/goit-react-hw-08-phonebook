@@ -41,7 +41,6 @@ const ContactForm = ({ onSubmit }) => {
   return (
     <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
       <label>
-        {/* Name */}
         <TextField
           type="text"
           name="name"
@@ -56,7 +55,6 @@ const ContactForm = ({ onSubmit }) => {
         />
       </label>
       <label>
-        {/* Number */}
         <TextField
           type="tel"
           name="number"

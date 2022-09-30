@@ -34,7 +34,6 @@ const UserMenu = ({ data }) => {
     >
       <Greeting>{`Привіт, ${data?.name}!`}</Greeting>
       <Button type="button" onClick={logOutUser} variant="contained">
-        {/* Log out */}
         <IoIosLogOut size={24} />
       </Button>
     </Box>

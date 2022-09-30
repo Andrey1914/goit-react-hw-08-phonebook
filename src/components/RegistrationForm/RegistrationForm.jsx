@@ -90,7 +90,6 @@ const RegistrationForm = ({ flag }) => {
           >
             {flag ? (
               <label>
-                {/* Name */}
                 <TextField
                   type="text"
                   name="name"
@@ -108,7 +107,6 @@ const RegistrationForm = ({ flag }) => {
               ''
             )}
             <label>
-              {/* Email */}
               <TextField
                 type="mail"
                 name="email"
@@ -121,7 +119,6 @@ const RegistrationForm = ({ flag }) => {
               />
             </label>
             <label>
-              {/* Password */}
               <TextField
                 type="password"
                 name="password"

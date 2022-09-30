@@ -1,5 +1,4 @@
 import UserMenu from 'components/UserMenu/UserMenu';
-// import { NavLink } from 'react-router-dom';
 import { NavigationLink } from './HeaderStyled';
 import { useGetUserQuery } from 'redux/API';
 import CssBaseline from '@mui/material/CssBaseline';

@@ -49,7 +49,6 @@ const ContactList = () => {
                   aria-label="delete"
                   id={id}
                   onClick={() => deleteContact(id)}
-                  // fullWidth
                   variant="outlined"
                   width="32px"
                   sx={{ ml: 3 }}
