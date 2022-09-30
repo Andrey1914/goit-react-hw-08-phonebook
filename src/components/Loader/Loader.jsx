@@ -1,9 +1,12 @@
 import { Oval } from 'react-loader-spinner';
 import Box from '@mui/material/Box';
+// import { Box, position } from 'styled-system';
+// import { Box, positions } from '@mui/material/Box';
 
 export default function Loader() {
   return (
-    <Box display="flex" justifyContent="center" alignItems="center">
+    <Box display="flex" justifyContent="center" alignItems="center" pt="100px">
+      {/* <Box positions="absolute" top={0} left={0} right={0} bottom={0}> */}
       <Oval
         height={80}
         width={80}
