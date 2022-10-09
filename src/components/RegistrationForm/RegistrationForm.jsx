@@ -76,12 +76,13 @@ const RegistrationForm = ({ flag }) => {
       <Container maxWidth="xs">
         <Box
           sx={{
-            marginTop: 6,
+            marginTop: 4,
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
           }}
         >
+          <p>Please, register or log in to your account.</p>
           <Box
             component="form"
             onSubmit={flag ? onRegister : onLogin}

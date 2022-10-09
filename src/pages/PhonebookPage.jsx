@@ -20,6 +20,7 @@ export default function PhonebookPage() {
     <Container maxWidth="xs">
       <Box
         sx={{
+          marginTop: 4,
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',
@@ -27,7 +28,10 @@ export default function PhonebookPage() {
       >
         <h1>Phonebook</h1>
         <ContactForm onSubmit={formSubmit} />
-        <h2>Contact</h2>
+
+        <Box component="h2" sx={{ marginTop: 3 }}>
+          Contacts
+        </Box>
         <Filter />
         {data && <ContactList />}
       </Box>

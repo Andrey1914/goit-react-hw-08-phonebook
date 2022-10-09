@@ -27,6 +27,7 @@ const UserMenu = ({ data }) => {
   return (
     <Box
       p="20px"
+      pr="40px"
       display="flex"
       gap="20px"
       justifyContent="flex-end"

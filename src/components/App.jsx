@@ -4,15 +4,17 @@ import PrivateRoute from 'routes/Rrivate';
 import PublicRoute from 'routes/Public';
 import { lazy, Suspense } from 'react';
 import Loader from './Loader/Loader';
+import { Global } from '@emotion/react';
+import { GlobalStyles } from './GlobalStyles';
 
 const RegistrationPage = lazy(() => import('pages/RegistrationPage'));
-
 const LoginPage = lazy(() => import('pages/LoginPage'));
 const PhonebookPage = lazy(() => import('pages/PhonebookPage'));
 
-export const App = () => {
+export default function App() {
   return (
-    <div>
+    <>
+      <Global styles={GlobalStyles} />
       <Suspense fallback={<Loader />}>
         <Header />
         <Routes>
@@ -50,6 +52,6 @@ export const App = () => {
           />
         </Routes>
       </Suspense>
-    </div>
+    </>
   );
-};
+}
