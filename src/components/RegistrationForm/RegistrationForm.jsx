@@ -16,23 +16,14 @@ const RegistrationForm = ({ flag }) => {
   const navigate = useNavigate();
 
   const handleChangeInput = event => {
-    const { name, value } = event.currentTarget;
-    switch (name) {
-      case 'name':
-        setName(value);
-        break;
+    const { name: inputName, value } = event.currentTarget;
+    const inputNameSetterMap = {
+      name: setName,
+      email: setEmail,
+      password: setPassword,
+    };
 
-      case 'email':
-        setEmail(value);
-        break;
-
-      case 'password':
-        setPassword(value);
-        break;
-
-      default:
-        break;
-    }
+    inputNameSetterMap[inputName](value);
   };
 
   const reset = () => {

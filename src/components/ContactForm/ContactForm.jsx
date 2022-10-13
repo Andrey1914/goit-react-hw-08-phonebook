@@ -9,18 +9,13 @@ const ContactForm = ({ onSubmit }) => {
   const [number, setNumber] = useState('');
 
   const handleInputChange = event => {
-    const { name, value } = event.currentTarget;
+    const { name: inputName, value } = event.currentTarget;
+    const inputNameSetterMap = {
+      name: setName,
+      number: setNumber,
+    };
 
-    switch (name) {
-      case 'name':
-        setName(value);
-        break;
-      case 'number':
-        setNumber(value);
-        break;
-      default:
-        break;
-    }
+    inputNameSetterMap[inputName](value);
   };
 
   const handleSubmit = event => {
