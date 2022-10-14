@@ -6,7 +6,7 @@ export const Title = styled.h1`
   align-items: center;
   gap: 20px;
   margin: 0;
-  /* margin-left: 20px; */
+  color: #fff;
 `;
 
 export const List = styled.ul`
@@ -14,7 +14,7 @@ export const List = styled.ul`
   gap: 32px;
   flex-direction: row-reverse;
   margin: 0;
-  /* padding: 20px; */
+
   list-style: none;
 `;
 

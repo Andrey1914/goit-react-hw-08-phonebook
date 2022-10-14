@@ -14,7 +14,9 @@ const ContactList = () => {
   return (
     <>
       {contacts?.length === 0 ? (
-        'Phone book is empty'
+        <Box component="p" color="#1976d2" fontSize="18px" fontWeight="400">
+          Phone book is empty
+        </Box>
       ) : (
         <Box width="100%" sx={{ mb: 2 }}>
           <Box
@@ -39,8 +41,8 @@ const ContactList = () => {
                   display="flex"
                   justifyContent="space-between"
                   alignItems="center"
-                  borderRadius="4px"
                   width="100%"
+                  color="#1976d2"
                   sx={{ m: 0, pl: 1, gap: 2 }}
                 >
                   {name}: <span>{number}</span>
