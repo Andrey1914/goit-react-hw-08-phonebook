@@ -80,7 +80,7 @@ const RegistrationForm = ({ flag }) => {
               component="p"
               color="#1976d2"
               fontSize="18px"
-              fontWeight="500"
+              fontWeight="400"
               marginTop={4}
             >
               Please, register or log in to your account.

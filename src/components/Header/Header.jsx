@@ -4,7 +4,7 @@ import { useGetUserQuery } from 'redux/API';
 
 import { List } from './HeaderStyled';
 import Box from '@mui/material/Box';
-import { RiContactsBook2Fill } from 'react-icons/ri';
+// import { RiContactsBook2Fill } from 'react-icons/ri';
 
 export default function Header() {
   const { data } = useGetUserQuery();
@@ -14,14 +14,15 @@ export default function Header() {
       <Box component="header" backgroundColor="#1976d2">
         {!data ? (
           <Box
-            p="20px"
-            pr="40px"
+            p="15px"
+            pr="30px"
             display="flex"
             justifyContent="space-between"
             alignItems="center"
           >
             <Title>
-              Phonebook <RiContactsBook2Fill size={32} />
+              Phonebook
+              {/* Phonebook <RiContactsBook2Fill size={32} /> */}
             </Title>
             <nav>
               <List>

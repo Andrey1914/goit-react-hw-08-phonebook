@@ -7,6 +7,10 @@ export const Title = styled.h1`
   gap: 20px;
   margin: 0;
   color: #fff;
+  @media (max-width: 567px) {
+    font-size: 24px;
+    font-weight: 600;
+  }
 `;
 
 export const List = styled.ul`
@@ -16,6 +20,9 @@ export const List = styled.ul`
   margin: 0;
 
   list-style: none;
+  @media (max-width: 567px) {
+    gap: 20px;
+  }
 `;
 
 export const NavigationLink = styled(NavLink)`
@@ -26,5 +33,9 @@ export const NavigationLink = styled(NavLink)`
   :hover,
   :focus {
     opacity: 0.8;
+  }
+  @media (max-width: 567px) {
+    font-size: 14px;
+    font-weight: 400;
   }
 `;

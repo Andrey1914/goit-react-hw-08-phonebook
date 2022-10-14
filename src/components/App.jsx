@@ -6,6 +6,7 @@ import { lazy, Suspense } from 'react';
 import Loader from './Loader/Loader';
 import { Global } from '@emotion/react';
 import { GlobalStyles } from './GlobalStyles';
+import Footer from './Footer/Footer';
 
 const RegistrationPage = lazy(() => import('pages/RegistrationPage'));
 const LoginPage = lazy(() => import('pages/LoginPage'));
@@ -51,6 +52,7 @@ export default function App() {
             }
           />
         </Routes>
+        <Footer />
       </Suspense>
     </>
   );
