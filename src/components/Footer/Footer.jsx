@@ -1,16 +1,10 @@
 import Box from '@mui/material/Box';
-import { Svg } from './FooterStyled';
+import { FooterElem, Svg } from './FooterStyled';
 
 export default function Footer() {
   return (
-    <Box
-      component="footer"
-      backgroundColor="#1976d2"
-      display="flex"
-      alignItems="center"
-      py={2}
-    >
-      <Box display="flex" alignItems="center" mx="auto" color="#fff">
+    <FooterElem>
+      <Box display="flex" alignItems="center" mx="auto" color="#1976d2">
         © 2022 | Developed by
         <a
           target="_blank"
@@ -20,6 +14,6 @@ export default function Footer() {
           <Svg />
         </a>
       </Box>
-    </Box>
+    </FooterElem>
   );
 }

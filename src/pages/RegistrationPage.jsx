@@ -1,9 +1,10 @@
+import { Box } from '@mui/material';
 import RegistrationForm from 'components/RegistrationForm/RegistrationForm';
 
 export default function RegistrationPage() {
   return (
-    <div>
+    <Box>
       <RegistrationForm flag />
-    </div>
+    </Box>
   );
 }

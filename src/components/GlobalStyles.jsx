@@ -7,16 +7,20 @@ export const GlobalStyles = css`
     width: 100vw;
     overflow-x: hidden;
   }
+
+  @font-face {
+    font-family: 'Montserrat';
+    src: url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;700&display=swap'),
+      format('truetype');
+  }
+
   body {
     margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
-      'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
-      'Helvetica Neue', sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+    line-height: 1.5;
+    font-family: 'Montserrat', sans-serif;
   }
   code {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    font-family: 'source-code-pro', 'Menlo', 'Monaco', 'Consolas', 'Courier New',
       monospace;
   }
   h1,

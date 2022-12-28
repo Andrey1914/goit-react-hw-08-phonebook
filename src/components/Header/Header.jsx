@@ -2,7 +2,7 @@ import UserMenu from 'components/UserMenu/UserMenu';
 import { NavigationLink, Title } from './HeaderStyled';
 import { useGetUserQuery } from 'redux/API';
 
-import { List } from './HeaderStyled';
+import { List, HeaderElem } from './HeaderStyled';
 import Box from '@mui/material/Box';
 // import { RiContactsBook2Fill } from 'react-icons/ri';
 
@@ -11,11 +11,12 @@ export default function Header() {
 
   return (
     <>
-      <Box component="header" backgroundColor="#1976d2">
+      <HeaderElem>
         {!data ? (
           <Box
+            width="1280px"
+            mx="auto"
             p="15px"
-            pr="30px"
             display="flex"
             justifyContent="space-between"
             alignItems="center"
@@ -27,7 +28,7 @@ export default function Header() {
             <nav>
               <List>
                 <NavigationLink to="/authorization">
-                  <li>Log in</li>
+                  <li>Login</li>
                 </NavigationLink>
                 <NavigationLink to="/registration">
                   <li>Registration</li>
@@ -38,7 +39,7 @@ export default function Header() {
         ) : (
           <UserMenu data={data} />
         )}
-      </Box>
+      </HeaderElem>
     </>
   );
 }

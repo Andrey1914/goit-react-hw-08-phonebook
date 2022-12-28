@@ -7,6 +7,8 @@ import Loader from './Loader/Loader';
 import { Global } from '@emotion/react';
 import { GlobalStyles } from './GlobalStyles';
 import Footer from './Footer/Footer';
+import { Box } from '@mui/system';
+import background from '../components/images/bg-img3.jpg';
 
 const RegistrationPage = lazy(() => import('pages/RegistrationPage'));
 const LoginPage = lazy(() => import('pages/LoginPage'));
@@ -17,42 +19,53 @@ export default function App() {
     <>
       <Global styles={GlobalStyles} />
       <Suspense fallback={<Loader />}>
-        <Header />
-        <Routes>
-          <Route
-            path="/registration"
-            element={
-              <PublicRoute>
-                <RegistrationPage />
-              </PublicRoute>
-            }
-          />
-          <Route
-            path="/authorization"
-            element={
-              <PublicRoute>
-                <LoginPage />
-              </PublicRoute>
-            }
-          />
-          <Route
-            path="/contacts"
-            element={
-              <PrivateRoute>
-                <PhonebookPage />
-              </PrivateRoute>
-            }
-          />
-          <Route
-            path="*"
-            element={
-              <PublicRoute>
-                <RegistrationPage />
-              </PublicRoute>
-            }
-          />
-        </Routes>
-        <Footer />
+        <Box
+          style={{
+            backgroundImage: `url(${background})`,
+            width: '100vw',
+            height: '100vh',
+            backgroundSize: 'cover',
+          }}
+        >
+          {/* <Image style={{ backgroundImage: `url(${background})` }}> */}
+          <Header />
+          <Routes>
+            <Route
+              path="/registration"
+              element={
+                <PublicRoute>
+                  <RegistrationPage />
+                </PublicRoute>
+              }
+            />
+            <Route
+              path="/authorization"
+              element={
+                <PublicRoute>
+                  <LoginPage />
+                </PublicRoute>
+              }
+            />
+            <Route
+              path="/contacts"
+              element={
+                <PrivateRoute>
+                  <PhonebookPage />
+                </PrivateRoute>
+              }
+            />
+            <Route
+              path="*"
+              element={
+                <PublicRoute>
+                  <RegistrationPage />
+                </PublicRoute>
+              }
+            />
+          </Routes>
+          <Footer />
+          {/* </Image> */}
+        </Box>
       </Suspense>
     </>
   );

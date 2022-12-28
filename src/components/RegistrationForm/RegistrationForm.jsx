@@ -6,8 +6,8 @@ import Button from '@mui/material/Button';
 import Container from '@mui/material/Container';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
-import background from '../images/bg-img3.jpg';
-import { Image } from '../../pages/PhonebookPageStyled';
+// import background from '../images/bg-img3.jpg';
+// import { Image } from '../../pages/PhonebookPageStyled';
 
 const RegistrationForm = ({ flag }) => {
   const [name, setName] = useState('');
@@ -66,86 +66,86 @@ const RegistrationForm = ({ flag }) => {
 
   return (
     <>
-      <Image style={{ backgroundImage: `url(${background})` }}>
-        <Container maxWidth="xs">
+      {/* <Image style={{ backgroundImage: `url(${background})` }}> */}
+      <Container maxWidth="xs">
+        <Box
+          sx={{
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+          }}
+        >
           <Box
-            sx={{
-              // marginTop: 4,
-              display: 'flex',
-              flexDirection: 'column',
-              alignItems: 'center',
-            }}
+            component="h2"
+            color="#1976d2"
+            fontSize="24px"
+            fontWeight="400"
+            marginTop={15}
+            textAlign="center"
           >
-            <Box
-              component="p"
-              color="#1976d2"
-              fontSize="18px"
-              fontWeight="400"
-              marginTop={4}
-            >
-              Please, register or log in to your account.
-            </Box>
-            <Box
-              component="form"
-              onSubmit={flag ? onRegister : onLogin}
-              noValidate
-              sx={{ mt: 1 }}
-            >
-              {flag ? (
-                <label>
-                  <TextField
-                    type="text"
-                    name="name"
-                    label="Name"
-                    value={name}
-                    pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
-                    title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
-                    required
-                    onChange={handleChangeInput}
-                    margin="normal"
-                    fullWidth
-                  />
-                </label>
-              ) : (
-                ''
-              )}
-              <label>
-                <TextField
-                  type="mail"
-                  name="email"
-                  label="Email"
-                  value={email}
-                  required
-                  onChange={handleChangeInput}
-                  margin="normal"
-                  fullWidth
-                />
-              </label>
-              <label>
-                <TextField
-                  type="password"
-                  name="password"
-                  label="Password"
-                  value={password}
-                  required
-                  onChange={handleChangeInput}
-                  margin="normal"
-                  fullWidth
-                />
-              </label>
-              <Button
-                type="submit"
-                fullWidth
-                variant="contained"
-                sx={{ mt: 3, mb: 2 }}
-              >
-                {flag ? 'Registration' : 'LogIn'}
-              </Button>
-            </Box>
-            <Toaster />
+            Please, register or login to your account.
           </Box>
-        </Container>
-      </Image>
+          <Box
+            component="form"
+            onSubmit={flag ? onRegister : onLogin}
+            noValidate
+            sx={{ mt: 1 }}
+          >
+            {flag ? (
+              <label>
+                <TextField
+                  type="text"
+                  name="name"
+                  label="Name"
+                  value={name}
+                  pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
+                  title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
+                  required
+                  onChange={handleChangeInput}
+                  margin="normal"
+                  fullWidth
+                />
+              </label>
+            ) : (
+              ''
+            )}
+            <label>
+              <TextField
+                type="mail"
+                name="email"
+                label="Email"
+                value={email}
+                required
+                onChange={handleChangeInput}
+                margin="normal"
+                fullWidth
+              />
+            </label>
+            <label>
+              <TextField
+                type="password"
+                name="password"
+                label="Password"
+                value={password}
+                required
+                onChange={handleChangeInput}
+                margin="normal"
+                fullWidth
+              />
+            </label>
+            <Button
+              type="submit"
+              fullWidth
+              variant="contained"
+              sx={{ mt: 3, mb: 2 }}
+            >
+              {flag ? 'Registration' : 'LogIn'}
+            </Button>
+          </Box>
+          <Toaster />
+        </Box>
+      </Container>
+      {/* </Image> */}
     </>
   );
 };

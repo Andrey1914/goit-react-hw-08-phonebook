@@ -26,15 +26,16 @@ const UserMenu = ({ data }) => {
 
   return (
     <Box
+      width="1280px"
       p="15px"
-      pr="30px"
+      mx="auto"
       display="flex"
       gap="20px"
       justifyContent="flex-end"
       alignItems="center"
     >
-      <Greeting>{`Привіт, ${data?.email}!`}</Greeting>
-      <Button type="button" onClick={logOutUser} variant="contained">
+      <Greeting>{`Hello, ${data?.email}!`}</Greeting>
+      <Button type="button" onClick={logOutUser} variant="outlined">
         <IoIosLogOut size={24} />
       </Button>
     </Box>
